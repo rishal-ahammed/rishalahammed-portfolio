@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
                   href="mailto:hello@example.com"
                   className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
                 >
-                  hello@example.com
+                  rishalahmd6@gmail.com
                 </a>
               </li>
               <li className="flex items-start">
@@ -91,12 +91,12 @@ const Footer: React.FC = () => {
                   href="tel:+11234567890"
                   className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
                 >
-                  +1 (123) 456-7890
+                  +91 9567148342
                 </a>
               </li>
               <li className="flex items-start">
                 <span className="text-primary-400 mr-2">Location:</span>
-                <span className="text-gray-400">San Francisco, California</span>
+                <span className="text-gray-400">Kerala, India</span>
               </li>
             </ul>
           </motion.div>
