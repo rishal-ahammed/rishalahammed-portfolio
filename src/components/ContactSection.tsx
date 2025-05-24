@@ -89,7 +89,7 @@ const ContactSection: React.FC = () => {
                     href="mailto:hello@example.com"
                     className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                   >
-                    hello@example.com
+                    rishalahmd6@gmail.com
                   </a>
                 </div>
               </div>
@@ -106,7 +106,7 @@ const ContactSection: React.FC = () => {
                     href="tel:+11234567890"
                     className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-300"
                   >
-                    +1 (123) 456-7890
+                    +91 9567148342
                   </a>
                 </div>
               </div>
@@ -120,7 +120,7 @@ const ContactSection: React.FC = () => {
                     Location
                   </h4>
                   <p className="text-gray-700 dark:text-gray-300">
-                    San Francisco, California
+                    Kerala, India
                   </p>
                 </div>
               </div>
@@ -131,16 +131,21 @@ const ContactSection: React.FC = () => {
                 Follow Me
               </h4>
               <div className="flex space-x-4">
-                {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
+               {[
+    { name: 'github', url: 'https://github.com/rishal-ahammed' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/rishal-ahammed/' },
+    { name: 'twitter', url: 'https://twitter.com/yourusername' },
+    { name: 'instagram', url: 'https://instagram.com/rishhh.l' }
+  ].map((social) => (
                   <a
-                    key={social}
-                    href={`https://${social}.com`}
+                    key={social.name}
+                    href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-white dark:bg-gray-800 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-primary-600 hover:text-white dark:hover:bg-primary-600 transition-colors duration-300 shadow-md"
-                    aria-label={`Follow on ${social}`}
+                    aria-label={`Follow on ${social.name}`}
                   >
-                    <i className={`fab fa-${social}`}></i>
+                    <i className={`fab fa-${social.name}`}></i>
                   </a>
                 ))}
               </div>

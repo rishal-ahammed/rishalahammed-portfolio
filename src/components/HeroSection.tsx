@@ -27,7 +27,7 @@ const HeroSection: React.FC = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold font-display text-gray-900 dark:text-white mb-4 leading-tight"
           >
-            I'm <span className="text-primary-600 dark:text-primary-400">Your Name</span>, 
+            I'm <span className="text-primary-600 dark:text-primary-400">Rishal Ahammed</span>, 
             <span className="block mt-2">Creative Developer</span>
           </motion.h1>
           <motion.p
