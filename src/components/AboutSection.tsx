@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Lightbulb, Monitor, Palette } from 'lucide-react';
+import localImage from '../../assets/images/Img-profile.jpg';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -57,7 +58,7 @@ const AboutSection: React.FC = () => {
             className="flex justify-center"
           >
             <img
-              src="https://images.pexels.com/photos/4974915/pexels-photo-4974915.jpeg"
+              src={localImage}
               alt="Developer at work"
               className="rounded-lg shadow-xl w-full max-w-md object-cover h-auto"
             />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Calendar, MapPin, Briefcase, ArrowUpRight } from 'lucide-react';
+import { Calendar, MapPin, Briefcase, ArrowDown  } from 'lucide-react';
 
 interface Experience {
   id: number;
@@ -238,7 +238,7 @@ const ExperienceSection: React.FC = () => {
             className="px-8 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-full font-medium transition-colors duration-300 shadow-lg hover:shadow-xl flex items-center"
           >
             Get in Touch
-            <ArrowUpRight size={16} className="ml-1" />
+            <ArrowDown  size={16} className="ml-1" />
           </a>
         </motion.div>
       </div>
