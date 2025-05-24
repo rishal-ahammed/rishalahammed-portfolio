@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Lightbulb, Monitor, Palette } from 'lucide-react';
-import localImage from '../../assets/images/Img-profile.jpg';
+import localImage from '../assets/images/Img-profile.jpg';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
