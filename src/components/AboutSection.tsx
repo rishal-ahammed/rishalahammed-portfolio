@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Lightbulb, Monitor, Palette } from 'lucide-react';
+import { Code, Lightbulb, Monitor, Palette, Download } from 'lucide-react';
 import localImage from '../assets/images/Img-profile.jpg';
 
 interface FeatureCardProps {
@@ -81,7 +81,7 @@ const AboutSection: React.FC = () => {
               My approach combines technical expertise with creative problem-solving to deliver solutions that not only meet but exceed client expectations. I believe in continuous learning and embracing new challenges.
             </p>
             
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
                 <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">5+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
@@ -99,6 +99,15 @@ const AboutSection: React.FC = () => {
                 <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
               </div>
             </div>
+
+            <a
+              href="/Rishal-Ahammed-CV.pdf"
+              download
+              className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
+            >
+              <Download size={20} className="mr-2" />
+              Download CV
+            </a>
           </motion.div>
         </div>
 
