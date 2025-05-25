@@ -7,12 +7,12 @@ const HeroSection: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-start overflow-hidden pt-20"
     >
       <ThreeBackground />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -34,7 +34,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.5 }}
-            className="text-lg text-gray-700 dark:text-gray-300 mb-8"
+            className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl"
           >
             I create captivating digital experiences through innovative design and clean code.
             Transforming ideas into reality with creativity and precision.
@@ -44,7 +44,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="flex flex-wrap justify-center gap-4"
+            className="flex flex-wrap gap-4"
           >
             <a
               href="#contact"
@@ -54,7 +54,7 @@ const HeroSection: React.FC = () => {
             </a>
             <a
               href="#projects"
-              className="px-8 py-3 bg-white dark:bg-gray-800 text-primary-600 dark:text-primary-400 border-2 border-primary-600 dark:border-primary-400 rounded-full font-medium hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors duration-300"
+              className="px-8 py-3 bg-white/80 dark:bg-gray-800/80 text-primary-600 dark:text-primary-400 border-2 border-primary-600 dark:border-primary-400 rounded-full font-medium hover:bg-primary-50 dark:hover:bg-gray-700 transition-colors duration-300 backdrop-blur-sm"
             >
               View Projects
             </a>
@@ -64,7 +64,7 @@ const HeroSection: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="flex justify-center space-x-5 mt-8"
+            className="flex space-x-5 mt-8"
           >
             <a 
               href="https://github.com/rishal-ahammed" 
@@ -103,7 +103,7 @@ const HeroSection: React.FC = () => {
         transition={{ delay: 0.8, duration: 0.5 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center pointer-events-none"
       >
-        <span className="text-sm text-gray-600 dark:text-gray-400 mb-2">
+        <span className="text-sm text-gray-600 dark:text-gray-400 mb-2 backdrop-blur-sm bg-white/30 dark:bg-gray-800/30 px-4 py-1 rounded-full">
           Scroll Down
         </span>
         <ChevronDown
