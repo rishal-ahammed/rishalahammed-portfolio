@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Code, Lightbulb, Monitor, Palette, Download } from 'lucide-react';
 import localImage from '../assets/images/Img-profile.jpg';
+import resume from '../assets/documents/Rishal_Ahammed Resume.pdf';
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -101,7 +102,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <a
-              href="/Rishal-Ahammed-CV.pdf"
+              href={resume}
               download
               className="inline-flex items-center justify-center px-6 py-3 bg-primary-600 hover:bg-primary-700 text-white rounded-lg font-medium transition-colors duration-300 shadow-lg hover:shadow-xl w-full sm:w-auto"
             >
