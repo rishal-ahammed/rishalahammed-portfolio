@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Github, Linkedin, Twitter } from 'lucide-react';
 import ThreeBackground from './ThreeBackground';
+import AnimatedBlob from './AnimatedBlob';
 
 const HeroSection: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const HeroSection: React.FC = () => {
       className="relative min-h-screen flex items-center justify-start overflow-hidden pt-20"
     >
       <ThreeBackground />
+      <AnimatedBlob />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-3xl">

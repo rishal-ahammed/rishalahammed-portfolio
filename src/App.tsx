@@ -6,6 +6,7 @@ import AboutSection from './components/AboutSection';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
+import GameSection from './components/GameSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -20,6 +21,7 @@ function App() {
           <SkillsSection />
           <ProjectsSection />
           <ExperienceSection />
+          <GameSection />
           <ContactSection />
         </main>
         <Footer />
