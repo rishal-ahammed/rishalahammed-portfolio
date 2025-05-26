@@ -18,21 +18,26 @@ const Footer: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="space-y-4"
           >
-            <h3 className="text-xl font-bold text-white mb-4">Portfolio</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Rishal.</h3>
             <p className="text-gray-400 max-w-md">
               Creating beautiful, functional, and innovative digital experiences through thoughtful design and clean code.
             </p>
             <div className="flex space-x-4 mt-6">
-              {['github', 'linkedin', 'twitter', 'instagram'].map((social) => (
+              {[
+    { name: 'github', url: 'https://github.com/rishal-ahammed' },
+    { name: 'linkedin', url: 'https://www.linkedin.com/in/rishal-ahammed/' },
+    { name: 'twitter', url: 'https://x.com/rishalahmd_' },
+    { name: 'instagram', url: 'https://instagram.com/rishhh.l' }
+  ].map((social) => (
                 <a
-                  key={social}
-                  href={`https://${social}.com`}
+                  key={social.name}
+                  href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-gray-800 hover:bg-primary-600 flex items-center justify-center transition-colors duration-300"
-                  aria-label={`Follow on ${social}`}
+                  aria-label={`Follow on ${social.name}`}
                 >
-                  <i className={`fab fa-${social} text-white`}></i>
+                  <i className={`fab fa-${social.name} text-white`}></i>
                 </a>
               ))}
             </div>
@@ -79,7 +84,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <span className="text-primary-400 mr-2">Email:</span>
                 <a
-                  href="mailto:hello@example.com"
+                  href="mailto:rishalahmd6@gmail.com"
                   className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
                 >
                   rishalahmd6@gmail.com
@@ -88,7 +93,7 @@ const Footer: React.FC = () => {
               <li className="flex items-start">
                 <span className="text-primary-400 mr-2">Phone:</span>
                 <a
-                  href="tel:+11234567890"
+                  href="tel:+919567148342"
                   className="text-gray-400 hover:text-primary-400 transition-colors duration-300"
                 >
                   +91 9567148342
@@ -110,7 +115,7 @@ const Footer: React.FC = () => {
           className="border-t border-gray-800 py-6 flex flex-col md:flex-row justify-between items-center mt-8"
         >
           <p className="text-gray-500 text-center md:text-left mb-4 md:mb-0">
-            © {new Date().getFullYear()} Portfolio. All rights reserved.
+            © {new Date().getFullYear()} Rishal. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}

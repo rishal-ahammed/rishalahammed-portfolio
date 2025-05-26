@@ -134,7 +134,7 @@ const ContactSection: React.FC = () => {
                {[
     { name: 'github', url: 'https://github.com/rishal-ahammed' },
     { name: 'linkedin', url: 'https://www.linkedin.com/in/rishal-ahammed/' },
-    { name: 'twitter', url: 'https://twitter.com/yourusername' },
+    { name: 'twitter', url: 'https://x.com/rishalahmd_' },
     { name: 'instagram', url: 'https://instagram.com/rishhh.l' }
   ].map((social) => (
                   <a
