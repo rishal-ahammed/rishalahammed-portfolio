@@ -36,7 +36,8 @@ const Navbar: React.FC = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 flex justify-center px-4 pt-4 pointer-events-none`}
+      className="fixed top-0 left-0 right-0 z-[9999] flex justify-center px-4 pt-4 pointer-events-none"
+      style={{ position: 'fixed', top: 0 }}
     >
       <div
         className={`w-full max-w-7xl rounded-2xl transition-all duration-300 pointer-events-auto ${
