@@ -176,7 +176,7 @@ const ContactSection: React.FC = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
-                    placeholder="John Doe"
+                    placeholder="Harry Van"
                   />
                 </div>
                 
@@ -192,7 +192,7 @@ const ContactSection: React.FC = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-300"
-                    placeholder="john@example.com"
+                    placeholder="harry@example.com"
                   />
                 </div>
                 
