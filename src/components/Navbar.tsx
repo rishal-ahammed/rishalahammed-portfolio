@@ -23,27 +23,39 @@ const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [visible, setVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Show/hide based on scroll direction
-      if (currentScrollY > lastScrollY) {
-        setVisible(false); // Scrolling down
+      if (isMobile) {
+        // Only hide/show navbar on mobile
+        if (currentScrollY > lastScrollY) {
+          setVisible(false); // Scrolling down
+        } else {
+          setVisible(true); // Scrolling up
+        }
       } else {
-        setVisible(true); // Scrolling up
+        setVisible(true); // Always visible on desktop
       }
       
-      // Add background when scrolled
       setScrolled(currentScrollY > 10);
-      
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [lastScrollY, isMobile]);
 
   return (
     <motion.header
