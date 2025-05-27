@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="text-sm font-medium text-primary-600 dark:text-primary-400 mb-2"
           >
-            WELCOME TO MY PORTFOLIO
+            Hi there!
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -38,8 +38,8 @@ const HeroSection: React.FC = () => {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-lg text-gray-700 dark:text-gray-300 mb-8 max-w-2xl"
           >
-            I create captivating digital experiences through innovative design and clean code.
-            Transforming ideas into reality with creativity and precision.
+            I turn data into insights and build ML-powered solutions.<br/>
+            With dev skills, I blend code and creativity to solve real problems.
           </motion.p>
           
           <motion.div
@@ -87,7 +87,7 @@ const HeroSection: React.FC = () => {
               <Linkedin size={24} />
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://x.com/rishalahmd_" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400 transition-colors duration-300"
