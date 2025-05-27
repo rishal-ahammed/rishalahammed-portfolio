@@ -9,6 +9,7 @@ import ExperienceSection from './components/ExperienceSection';
 import GameSection from './components/GameSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
+import CurrentProjectSection from './components/CurrentProjectSection';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Navbar />
         <main>
           <HeroSection />
+          <CurrentProjectSection />
           <AboutSection />
           <SkillsSection />
           <ProjectsSection />
@@ -29,5 +31,3 @@ function App() {
     </ThemeProvider>
   );
 }
-
-export default App;
