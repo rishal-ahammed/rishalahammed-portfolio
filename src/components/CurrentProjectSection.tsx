@@ -16,7 +16,7 @@ const CurrentProjectSection: React.FC = () => {
     const timer = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
       setDirection(1);
-    }, 4000);
+    }, 5000); // Increased interval for smoother transitions
 
     return () => clearInterval(timer);
   }, []);
@@ -25,21 +25,18 @@ const CurrentProjectSection: React.FC = () => {
     enter: (direction: number) => ({
       x: direction > 0 ? 1000 : -1000,
       opacity: 0,
-      rotateY: direction > 0 ? 45 : -45,
       scale: 0.8,
     }),
     center: {
       zIndex: 1,
       x: 0,
       opacity: 1,
-      rotateY: 0,
       scale: 1,
     },
     exit: (direction: number) => ({
       zIndex: 0,
       x: direction < 0 ? 1000 : -1000,
       opacity: 0,
-      rotateY: direction < 0 ? 45 : -45,
       scale: 0.8,
     }),
   };
@@ -49,13 +46,13 @@ const CurrentProjectSection: React.FC = () => {
       <div className="absolute inset-0 bg-gradient-to-r from-primary-500/10 to-secondary-500/10 dark:from-primary-500/5 dark:to-secondary-500/5" />
       
       <div className="container mx-auto px-4 h-full flex items-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center w-full">
-          <div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
+          <div className="order-2 lg:order-1">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-3xl font-bold text-gray-900 dark:text-white mb-4"
+              className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4"
             >
               Currently Working On
             </motion.h2>
@@ -64,7 +61,7 @@ const CurrentProjectSection: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-lg text-gray-600 dark:text-gray-300"
+              className="text-base md:text-lg text-gray-600 dark:text-gray-300"
             >
               Portfolio Website - A modern, responsive portfolio showcasing my work and skills
             </motion.p>
@@ -93,8 +90,8 @@ const CurrentProjectSection: React.FC = () => {
             </motion.div>
           </div>
           
-          <div className="relative h-[40vh] perspective-1000">
-            <AnimatePresence initial={false} custom={direction}>
+          <div className="order-1 lg:order-2 relative h-[30vh] md:h-[40vh] w-full">
+            <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={currentIndex}
                 custom={direction}
@@ -103,17 +100,13 @@ const CurrentProjectSection: React.FC = () => {
                 animate="center"
                 exit="exit"
                 transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.4 },
-                  rotateY: { duration: 0.8 },
-                  scale: { duration: 0.4 },
+                  x: { type: "spring", stiffness: 200, damping: 30 },
+                  opacity: { duration: 0.2 },
+                  scale: { duration: 0.2 },
                 }}
-                className="absolute inset-0 w-full h-full"
-                style={{
-                  transformStyle: 'preserve-3d',
-                }}
+                className="absolute inset-0"
               >
-                <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl transform-gpu">
+                <div className="relative w-full h-full rounded-xl overflow-hidden shadow-2xl">
                   <img
                     src={images[currentIndex]}
                     alt={`Project screenshot ${currentIndex + 1}`}
