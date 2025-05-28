@@ -83,7 +83,7 @@ const Navbar: React.FC = () => {
                 href="#home"
                 className="text-2xl font-bold font-display text-primary-700 dark:text-primary-300"
               >
-                Rishal.
+                R.
               </a>
             </motion.div>
 
