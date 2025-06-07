@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Code, Lightbulb, Monitor, Palette, Download } from 'lucide-react';
+import { Code, Lightbulb, Monitor, Palette, Download, BarChart, Cpu, Activity } from 'lucide-react';
 import localImage from '../assets/images/Img-profile.jpg';
 import resume from '../assets/documents/Rishal_Ahammed Resume.pdf';
 
@@ -46,7 +46,7 @@ const AboutSection: React.FC = () => {
           </h2>
           <div className="w-20 h-1.5 bg-primary-600 dark:bg-primary-400 mx-auto rounded-full mb-6"></div>
           <p className="max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
-            I'm a passionate developer with a keen eye for design and a dedication to creating seamless, user-centric experiences.
+            I'm a data-driven developer with a passion for design and a focus on crafting seamless, intelligent, user-centric digital experiences.
           </p>
         </motion.div>
 
@@ -76,27 +76,31 @@ const AboutSection: React.FC = () => {
               My Journey
             </h3>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              With over 5 years of experience in web development, I specialize in creating responsive, accessible, and performant applications. I'm passionate about clean code, intuitive UX, and staying on the cutting edge of technology.
+              With strong expertise in data science and analytics, I uncover insights from complex data. I'm passionate about predictive modeling, data visualization, and driving smarter decisions through machine learning and statistical analysis.
+            </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              I develop responsive, efficient, and user-friendly web and mobile applications using modern technologies.
+              I focus on clean architecture, maintainability, and seamless user experiences across platforms.
             </p>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
-              My approach combines technical expertise with creative problem-solving to deliver solutions that not only meet but exceed client expectations. I believe in continuous learning and embracing new challenges.
+              My approach combines technical expertise with creative problem-solving to deliver solutions that not only meet but exceed expectations. I believe in continuous learning and embracing new challenges.
             </p>
             
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">5+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Years Experience</div>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">50+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
-              </div>
-              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
-                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">30+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400">Happy Clients</div>
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">4+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400"> Professional web development experience</div>
               </div>
               <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
                 <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">10+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Projects Completed</div>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">10+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400">Happy Clients</div>
+              </div>
+              <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md">
+                <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-1">20+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">Technologies</div>
               </div>
             </div>
@@ -118,6 +122,18 @@ const AboutSection: React.FC = () => {
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <FeatureCard
+            icon={<BarChart size={24} />}
+            title="Data Science & Analytics"
+            description="Extracting insights from data to drive smart, data-backed decisions."
+            delay={0.1}
+          />
+          <FeatureCard
+            icon={<Cpu size={24} />}
+            title="Machine Learning & AI"
+            description="Building intelligent models and automations to solve complex problems."
+            delay={0.1}
+          />
+          <FeatureCard
             icon={<Code size={24} />}
             title="Web Development"
             description="Building responsive websites and applications with modern frameworks and clean code."
@@ -129,7 +145,7 @@ const AboutSection: React.FC = () => {
             description="Creating intuitive interfaces and seamless user experiences that delight and engage."
             delay={0.2}
           />
-          <FeatureCard
+          {/* <FeatureCard
             icon={<Monitor size={24} />}
             title="Frontend Expertise"
             description="Specialized in React, Vue, and modern CSS to create stunning interfaces."
@@ -140,7 +156,7 @@ const AboutSection: React.FC = () => {
             title="Creative Solutions"
             description="Innovative approaches to complex problems with effective, scalable solutions."
             delay={0.4}
-          />
+          /> */}
         </div>
       </div>
     </section>

@@ -14,41 +14,28 @@ interface Experience {
 const experiences: Experience[] = [
   {
     id: 1,
-    role: 'Senior Frontend Developer',
-    company: 'Tech Innovations Inc.',
-    location: 'San Francisco, CA',
-    period: 'Jan 2022 - Present',
+    role: 'Data Analyst Intern',
+    company: 'SMEC Labs',
+    location: '', // Add location if needed
+    period: 'Jul 2019 - Jan 2021',
     description: [
-      'Led a team of 5 developers to build and maintain complex web applications',
-      'Architected and implemented a new design system reducing development time by 30%',
-      'Optimized application performance, improving load times by 40%',
-      'Mentored junior developers and conducted code reviews to ensure quality standards',
+      'Analyzed large datasets using Pandas and NumPy to uncover insights for internal reporting.',
+      'Built predictive models with Scikit-learn and TensorFlow to forecast business trends.',
+      'Developed interactive dashboards using Tableau and Power BI to visualize key metrics.',
+      'Automated data cleaning and preprocessing tasks, improving workflow efficiency by 25%.',
     ],
   },
   {
     id: 2,
-    role: 'Frontend Developer',
-    company: 'Digital Solutions LLC',
-    location: 'Boston, MA',
-    period: 'Mar 2020 - Dec 2021',
+    role: 'Flutter Developer Intern',
+    company: 'Softroniics',
+    location: 'Malappuram, India',
+    period: 'Jul 2019 - Jan 2021',
     description: [
-      'Developed responsive web applications using React, TypeScript, and modern CSS',
-      'Collaborated with designers to implement pixel-perfect UI components',
-      'Built and maintained RESTful APIs using Node.js and Express',
-      'Implemented automated testing resulting in a 25% reduction in bugs',
-    ],
-  },
-  {
-    id: 3,
-    role: 'Web Developer Intern',
-    company: 'StartUp Ventures',
-    location: 'Remote',
-    period: 'Jun 2019 - Feb 2020',
-    description: [
-      'Assisted in building and deploying web applications for various clients',
-      'Created interactive UI components and responsive layouts',
-      'Participated in daily stand-ups and biweekly sprint planning',
-      'Learned industry-standard development practices and workflows',
+      'Developed a cross-platform mobile app using Flutter and Firebase for event scheduling and management.',
+      'Designed intuitive UI screens and navigation to ensure seamless user experience.',
+      'Integrated real-time notifications and user authentication features.',
+      'Collaborated within an agile team alongside designers and backend developers.',
     ],
   },
 ];
@@ -63,30 +50,39 @@ interface Education {
 }
 
 const education: Education[] = [
-  {
+   {
     id: 1,
-    degree: 'Master of Computer Science',
-    institution: 'Stanford University',
-    location: 'Stanford, CA',
-    period: '2017 - 2019',
+    degree: 'Diploma in Data Science',
+    institution: 'SMEC Labs',
+    location: 'Ernakulam, India',
+    period: 'Jul 2019 - Jan 2021',
     details: [
-      'Specialized in Human-Computer Interaction and Web Technologies',
-      'GPA: 3.8/4.0',
-      'Teaching Assistant for Introduction to Web Development course',
-      'Awarded academic scholarship for outstanding performance',
+      'Covered data analysis, machine learning, and big data technologies',
+      'Completed multiple real-world data projects',
+      'Collaborated on team-based data science challenges',
     ],
   },
   {
     id: 2,
-    degree: 'Bachelor of Science in Computer Science',
-    institution: 'MIT',
-    location: 'Cambridge, MA',
-    period: '2013 - 2017',
+    degree: 'Bachelor of Computer Application',
+    institution: 'ISS Arts and Science College',
+    location: 'Perinthalmanna, India',
+    period: 'Jun 2021 - May 2024',
     details: [
-      'Graduated with honors',
-      'Participated in multiple hackathons and coding competitions',
-      'Member of the Computer Science Student Association',
-      'Completed thesis on "Optimizing User Experience in Web Applications"',
+      'Majoring in Computer Science',
+      'Completed key projects in data science and software development',
+      'Active participant in coding clubs and workshops',
+    ],
+  },
+  {
+    id: 3,
+    degree: 'Higher Secondary Education - Computer Science',
+    institution: 'GMHSS Perinthalmanna',
+    location: 'Perinthalmanna, India',
+    period: 'Jun 2019 - Mar 2021',
+    details: [
+      'Focused on Computer Science subjects',
+      'Excelled in mathematics and programming courses',
     ],
   },
 ];
@@ -125,7 +121,7 @@ const ExperienceSection: React.FC = () => {
               className="text-2xl font-semibold text-gray-900 dark:text-white mb-8 flex items-center"
             >
               <Briefcase size={24} className="mr-2 text-primary-600 dark:text-primary-400" />
-              Work Experience
+              Interships & Work Experience
             </motion.h3>
 
             <div className="relative pl-8 border-l-2 border-primary-300 dark:border-primary-700 space-y-10">

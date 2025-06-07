@@ -14,34 +14,34 @@ interface SkillCategory {
 
 const skillCategories: SkillCategory[] = [
   {
-    title: 'Frontend',
-    skills: [
-      { name: 'React', level: 90, color: 'primary' },
-      { name: 'JavaScript', level: 85, color: 'accent' },
-      { name: 'TypeScript', level: 80, color: 'secondary' },
-      { name: 'CSS/SCSS', level: 85, color: 'primary' },
-      { name: 'HTML5', level: 95, color: 'accent' },
-    ],
+    title: 'Data Science & AI',
+  skills: [
+    { name: 'Python', level: 90, color: 'primary' },
+    { name: 'Machine Learning', level: 85, color: 'accent' },
+    { name: 'TensorFlow', level: 80, color: 'secondary' },
+    { name: 'Data Analytics', level: 85, color: 'primary' },
+    { name: 'NLP & AI', level: 75, color: 'accent' },
+  ],  
   },
   {
-    title: 'Backend',
-    skills: [
-      { name: 'Node.js', level: 75, color: 'secondary' },
-      { name: 'Express', level: 70, color: 'primary' },
-      { name: 'MongoDB', level: 65, color: 'accent' },
-      { name: 'SQL', level: 60, color: 'secondary' },
-      { name: 'GraphQL', level: 60, color: 'primary' },
-    ],
+    title: 'Web & App Development',
+  skills: [
+    { name: 'HTML5 & CSS3', level: 90, color: 'accent' },
+    { name: 'React', level: 60, color: 'primary' },
+    { name: 'JavaScript', level: 80, color: 'accent' },
+    { name: 'Flutter', level: 80, color: 'secondary' },
+    { name: 'Node.js', level: 60, color: 'primary' },
+  ],
   },
   {
-    title: 'Tools & Others',
-    skills: [
-      { name: 'Git', level: 80, color: 'accent' },
-      { name: 'Webpack', level: 70, color: 'secondary' },
-      { name: 'Docker', level: 60, color: 'primary' },
-      { name: 'Figma', level: 75, color: 'accent' },
-      { name: 'Responsive Design', level: 90, color: 'secondary' },
-    ],
+    title: 'Tools & Platforms',
+  skills: [
+    { name: 'Git', level: 90, color: 'accent' },
+    { name: 'Firebase', level: 75, color: 'secondary' },
+    { name: 'Tableau', level: 75, color: 'primary' },
+    { name: 'MongoDB & SQL', level: 70, color: 'accent' },
+    { name: 'Jupyter Notebook', level: 80, color: 'secondary' },
+  ],
   },
 ];
 
@@ -134,11 +134,14 @@ const SkillsSection: React.FC = () => {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'JavaScript', 'TypeScript', 'React', 'Vue', 'Node.js',
-              'Express', 'MongoDB', 'PostgreSQL', 'GraphQL', 'Redux',
-              'Sass', 'Tailwind CSS', 'Bootstrap', 'Figma', 'Adobe XD',
-              'Git', 'GitHub', 'Docker', 'AWS', 'Firebase',
-              'Jest', 'Cypress', 'Webpack', 'Vite', 'Next.js'
+              'Python', 'Java', 'Scala',
+              'NumPy', 'Pandas', 'Matplotlib', 'Seaborn',
+              'Tableau', 'Power BI',
+              'Scikit-Learn', 'TensorFlow', 'Keras', 'OpenCV', 'NLTK',
+              'Hadoop', 'Spark',
+              'MySQL', 'MongoDB',
+              'Visual Studio Code', 'Jupyter Notebook', 'Google Colab', 'PyCharm', 'Eclipse', 'IntelliJ IDEA', 'NetBeans'
+
             ].map((tech, index) => (
               <motion.span
                 key={tech}

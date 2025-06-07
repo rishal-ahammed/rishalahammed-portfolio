@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ExternalLink, Github, ArrowUpRight } from 'lucide-react';
-import ProjectView from './ProjectView';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import ProjectView from "./ProjectView";
 
 interface Project {
   id: number;
@@ -21,81 +21,174 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'E-commerce Platform',
-    description: 'A full-featured online store with product listings, cart functionality, and secure checkout process.',
-    longDescription: 'An advanced e-commerce platform built with React and Node.js, featuring real-time inventory management, secure payment processing, and a responsive design that works seamlessly across all devices.',
-    image: 'https://images.pexels.com/photos/39284/macbook-apple-imac-computer-39284.jpeg',
-    category: 'Web Development',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
+    title: "Smoking & Drinking Behavior Prediction",
+    description:
+      "A machine learning model that predicts smoking and alcohol consumption based on health and demographic data.",
+    longDescription:
+      "Developed a predictive system using supervised learning algorithms to classify individuals based on their likelihood to smoke or drink. The model was trained on real-world demographic and health datasets, with feature engineering and exploratory data analysis to identify key indicators. Performance was evaluated using precision, recall, and ROC-AUC metrics.",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg", // Replace with your own or dataset-related image
+    category: "Data Science & Machine Learning",
+    technologies: ["Python", "Pandas", "Scikit-Learn", "Matplotlib", "Seaborn"],
+    demoUrl: "https://example.com", // Add your project URL if hosted
+    codeUrl: "https://github.com/yourusername/smoking-drinking-prediction", // Replace with your GitHub repo link
     features: [
-      'User authentication and profile management',
-      'Real-time inventory tracking',
-      'Secure payment processing with Stripe',
-      'Advanced search and filtering',
-      'Responsive design for all devices',
-      'Admin dashboard for inventory management'
+      "Data cleaning and preprocessing",
+      "Exploratory Data Analysis (EDA) and visualizations",
+      "Feature selection and engineering",
+      "Model training with classification algorithms",
+      "Performance evaluation with confusion matrix and ROC-AUC",
+      "Result interpretation for behavior analysis",
     ],
     challenges: [
-      'Implemented real-time inventory synchronization across multiple servers',
-      'Optimized image loading and caching for faster page loads',
-      'Developed a secure payment gateway integration with error handling',
-      'Created a scalable database structure for millions of products'
+      "Handling missing and imbalanced data",
+      "Selecting relevant features for behavior classification",
+      "Tuning hyperparameters for optimal accuracy",
+      "Ensuring model generalization and avoiding overfitting",
     ],
     screenshots: [
-      'https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg',
-      'https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg',
-      'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg',
-      'https://images.pexels.com/photos/1181673/pexels-photo-1181673.jpeg'
-    ]
+      "https://images.pexels.com/photos/618558/pexels-photo-618558.jpeg", // Replace with screenshots or result charts
+      "https://images.pexels.com/photos/669610/pexels-photo-669610.jpeg",
+    ],
   },
   {
     id: 2,
-    title: 'Social Media Dashboard',
-    description: 'Analytics dashboard for social media managers with real-time data visualization and reporting.',
-    longDescription: 'A comprehensive social media analytics platform that helps businesses track their social media performance across multiple platforms. Features include real-time data visualization, automated reporting, and AI-powered insights.',
-    image: 'https://images.pexels.com/photos/938965/pexels-photo-938965.jpeg',
-    category: 'Web Development',
-    technologies: ['Vue.js', 'Express', 'Chart.js', 'Firebase'],
-    demoUrl: 'https://example.com',
-    codeUrl: 'https://github.com',
+    title: "Spotify Dataset Analysis",
+    description:
+      "An in-depth data analysis project uncovering patterns in track popularity, audio features, and platform performance.",
+    longDescription:
+      "This project involved exploratory data analysis (EDA) and visualization of a comprehensive Spotify dataset to identify key patterns in music streaming behavior. The analysis focused on attributes like danceability, energy, tempo, release trends, and platform distribution. Advanced correlation and statistical insights were extracted to understand what drives popularity across different platforms.",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg", // You can replace with a Spotify-themed or custom visual
+    category: "Data Analysis & Visualization",
+    technologies: ["Python", "Pandas", "Matplotlib", "Seaborn", "Tableau"],
+    demoUrl: "https://example.com/spotify-dashboard", // Optional: link to Tableau Public or report if available
+    codeUrl: "https://github.com/yourusername/spotify-data-analysis", // Replace with actual repo link
     features: [
-      'Real-time analytics tracking',
-      'Custom report generation',
-      'Multi-platform integration',
-      'Automated insights',
-      'Team collaboration tools'
+      "Year-wise trends in track energy and tempo",
+      "Correlation analysis between streams and audio features",
+      "Genre and mood analysis across platforms",
+      "Visual dashboards with distribution and performance insights",
+      "Analysis of seasonal popularity spikes and monthly releases",
+      "Deep dive into playlist appearances and chart consistency",
     ],
     challenges: [
-      'Built a scalable real-time data processing pipeline',
-      'Implemented complex data visualization components',
-      'Optimized performance for large datasets',
-      'Created an intuitive user interface for complex data'
+      "Cleaning and merging high-dimensional data",
+      "Identifying meaningful features from audio metrics",
+      "Handling missing and inconsistent streaming records",
+      "Designing visualizations that convey multi-platform insights",
     ],
     screenshots: [
-      'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg',
-      'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg',
-      'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg'
-    ]
+      "https://images.pexels.com/photos/167092/pexels-photo-167092.jpeg", // Replace with actual analysis charts or dashboards
+      "https://images.pexels.com/photos/1648534/pexels-photo-1648534.jpeg",
+    ],
   },
+  {
+    id: 3,
+    title: "ShirtPrint Co. Assistant (AI Chatbot Project)",
+    description:
+      "An intelligent chatbot designed to assist customers with custom shirt printing orders and inquiries.",
+    longDescription:
+      "Developed an AI-powered chatbot for ShirtPrint Co., a custom shirt printing business in Kochi. The chatbot streamlines customer interactions by answering queries, guiding order placements, and providing updates on print status. Built with React and Node.js for web interface and backend, leveraging external AI APIs to enhance natural language understanding and intelligence.",
+    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    category: "AI & Chatbot Development",
+    technologies: ["React", "Node.js", "REST APIs", "Third-party AI API Keys"],
+    demoUrl: "https://example.com/shirtprint-chatbot",
+    codeUrl: "https://github.com/yourusername/shirtprint-chatbot",
+    features: [
+      "Natural language processing via AI APIs",
+      "Order management integration for real-time updates",
+      "Multi-platform support (web and mobile)",
+      "Personalized recommendations based on user preferences",
+      "Seamless conversation flow with fallback handling",
+      "Analytics dashboard for monitoring chatbot interactions",
+    ],
+    challenges: [
+      "Integrating third-party AI APIs effectively",
+      "Ensuring accurate understanding of custom order specifications",
+      "Building a scalable backend with Node.js",
+      "Optimizing response time and user engagement",
+    ],
+    screenshots: [
+      "https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg",
+      "https://images.pexels.com/photos/3182788/pexels-photo-3182788.jpeg",
+    ],
+  },
+  {
+  id: 4,
+  title: 'Evento – Event Management App',
+  description: 'A cross-platform app for creating, managing, and promoting events with ticketing and real-time updates.',
+  longDescription: 'Developed a Flutter-based mobile app for event management, enabling event creation, ticket booking, notifications, and attendee analytics. Integrated Firebase for authentication, real-time database, and push notifications to provide a seamless experience across Android and iOS.',
+  image: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg',
+  category: 'Mobile App Development',
+  technologies: ['Flutter', 'Firebase', 'Dart', 'Google Maps API'],
+  demoUrl: 'https://example.com/evento-app',
+  codeUrl: 'https://github.com/yourusername/evento-app',
+  features: [
+    'Cross-platform support for Android and iOS',
+    'Event creation and management tools for organizers',
+    'Ticket booking and secure payment processing',
+    'Real-time notifications and event updates',
+    'Personalized event recommendations',
+    'Map integration for event locations'
+  ],
+  challenges: [
+    'Synchronizing event data and bookings in real-time',
+    'Ensuring smooth and responsive UI across devices',
+    'Integrating secure payment gateways',
+    'Effective push notification management'
+  ],
+  screenshots: [
+    'https://images.pexels.com/photos/3184462/pexels-photo-3184462.jpeg',
+    'https://images.pexels.com/photos/3184457/pexels-photo-3184457.jpeg'
+  ]
+},
+{
+  id: 5,
+  title: 'SINE – Super App Concept',
+  description: 'A comprehensive Super App integrating messaging, payments, and third-party mini-apps for daily services.',
+  longDescription: 'Conceptualized and designed a scalable Super App combining instant messaging, secure payments, order management, and third-party mini-app integrations. Built with React and Node.js, the platform provides a unified user experience for personal and commercial use with dynamic dashboards and secure transaction processing.',
+  image: 'https://images.pexels.com/photos/3183171/pexels-photo-3183171.jpeg',
+  category: 'Mobile & Web Concept',
+  technologies: ['React', 'Node.js', 'Firebase', 'REST APIs', 'Figma'],
+  demoUrl: 'https://example.com/sine-superapp',
+  codeUrl: 'https://github.com/yourusername/sine-superapp',
+  features: [
+    'Unified platform with messaging, payments, and order management',
+    'Support for third-party mini-app integrations',
+    'Secure user authentication and encrypted transactions',
+    'Dynamic dashboards for personal and commercial users',
+    'Scalable architecture for service expansion'
+  ],
+  challenges: [
+    'Designing flexible architecture for mini-app support',
+    'Ensuring secure real-time messaging and transactions',
+    'Creating intuitive multi-service user interface',
+    'Managing data synchronization with low latency'
+  ],
+  screenshots: [
+    'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg',
+    'https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg'
+  ]
+},
+
+
   // ... (remaining projects with similar detailed data)
 ];
 
 const ProjectsSection: React.FC = () => {
-  const [filter, setFilter] = useState<string>('All');
+  const [filter, setFilter] = useState<string>("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const categories = ['All', ...new Set(projects.map(project => project.category))];
-  
-  const filteredProjects = filter === 'All'
-    ? projects
-    : projects.filter(project => project.category === filter);
+  const categories = [
+    "All",
+    ...new Set(projects.map((project) => project.category)),
+  ];
+
+  const filteredProjects =
+    filter === "All"
+      ? projects
+      : projects.filter((project) => project.category === filter);
 
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gray-50 dark:bg-gray-900"
-    >
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -105,7 +198,10 @@ const ProjectsSection: React.FC = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="text-primary-600 dark:text-primary-400">Projects</span>
+            My{" "}
+            <span className="text-primary-600 dark:text-primary-400">
+              Projects
+            </span>
           </h2>
           <div className="w-20 h-1.5 bg-primary-600 dark:bg-primary-400 mx-auto rounded-full mb-6"></div>
           <p className="max-w-2xl mx-auto text-lg text-gray-700 dark:text-gray-300">
@@ -126,8 +222,8 @@ const ProjectsSection: React.FC = () => {
               onClick={() => setFilter(category)}
               className={`px-5 py-2 rounded-full transition-all duration-300 ${
                 filter === category
-                  ? 'bg-primary-600 text-white shadow-md'
-                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                  ? "bg-primary-600 text-white shadow-md"
+                  : "bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700"
               }`}
             >
               {category}
